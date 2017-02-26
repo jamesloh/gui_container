@@ -1,0 +1,10 @@
+#!/usr/bin/expect -f
+set timeout 20
+spawn apt-get install -y xserver-xorg xinit
+expect "More\] "
+send -- "\r"
+expect "Country of origin for the keyboard: "
+send -- "29\r"
+expect "Keyboard layout: "
+send -- "1\r"
+expect eof
