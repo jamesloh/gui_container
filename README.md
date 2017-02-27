@@ -33,6 +33,13 @@ Log file is /root/.vnc/ff651f4fb3d2:1.log
 ```
 6. Outside the container, you can now vncviewer localhost:5901
 
+# Issues on MacOS X El Capitan
+
+Everything works as above without the need for sudo.
+For the VNC viewer, please download TightVNC Java Viewer from http://www.tightvnc.com/download.php
+
+However, there is something which blocks port 5901 access. Will investigate further when I have time.
+
 # Request for help
 
 Can someone try this in Windows as well as MacOS X and add to this README? 
