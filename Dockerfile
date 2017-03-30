@@ -3,6 +3,7 @@ FROM ubuntu:16.04
 RUN apt-get update && apt-get install -y sudo
 
 RUN useradd -ms /bin/bash ubuntu
+RUN usermod -a -G adm ubuntu
 
 RUN echo "ubuntu ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/ubuntu
 RUN chmod 0440 /etc/sudoers.d/ubuntu
