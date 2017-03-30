@@ -13,25 +13,28 @@ Most importantly, I needed it myself.
 3. sudo docker build -t ubuntu1604gui .
 4. sudo docker run -p 5901:5901 --name xserve -td ubuntu1604gui
 5. sudo docker exec -it xserve bash
+
    Execute the following commands in the container.
 
 ``` 
-# USER=root vncserver
+# USER=ubuntu vncserver
 
 You will require a password to access your desktops.
 
 Password: 
 Verify:   
 Would you like to enter a view-only password (y/n)? n
-xauth:  file /root/.Xauthority does not exist
+xauth:  file /home/ubuntu/.Xauthority does not exist
 
 New 'X' desktop is ff651f4fb3d2:1
 
-Starting applications specified in /root/.vnc/xstartup
-Log file is /root/.vnc/ff651f4fb3d2:1.log
+Starting applications specified in /home/ubuntu/.vnc/xstartup
+Log file is /home/ubuntu/.vnc/ff651f4fb3d2:1.log
 
 ```
 6. Outside the container, you can now vncviewer localhost:5901
+
+7. Start the Terminal Emulator from the XFCE menu. In the Terminal Emulator, type 'firefox' to start the Firefox web browser. Firefox doesn't start correctly from the XFCE menu.
 
 # Issues on MacOS X El Capitan
 
