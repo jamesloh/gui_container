@@ -17,7 +17,7 @@ Most importantly, I needed it myself.
    Execute the following commands in the container.
 
 ``` 
-# USER=ubuntu vncserver
+# vncserver
 
 You will require a password to access your desktops.
 

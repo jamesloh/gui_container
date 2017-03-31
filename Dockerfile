@@ -11,6 +11,7 @@ RUN chmod 0440 /etc/sudoers.d/ubuntu
 RUN apt-get install -y curl git vim expect-dev
 
 USER ubuntu
+ENV USER ubuntu
 ENV HOME /home/ubuntu
 WORKDIR /home/ubuntu
 RUN mkdir /home/ubuntu/projects
