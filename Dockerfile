@@ -25,11 +25,14 @@ COPY xserver-install.exp /home/ubuntu
 RUN TERM=dumb SHELL=/bin/bash expect /home/ubuntu/xserver-install.exp
 RUN sudo dpkg --configure -a
 
-RUN sudo apt-get install -y xfce4 tightvncserver thunar firefox
+RUN sudo apt install -y xfce4 tightvncserver thunar bzip2
 
 RUN mkdir /home/ubuntu/.vnc
 COPY xstartup /home/ubuntu/.vnc
 RUN chmod 755 /home/ubuntu/.vnc/xstartup
+
+RUN curl -LOC - https://download-installer.cdn.mozilla.net/pub/firefox/releases/52.0.2/linux-x86_64/en-US/firefox-52.0.2.tar.bz2
+RUN tar xvfj firefox-52.0.2.tar.bz2
 
 CMD ["/bin/bash", "-l"]
 

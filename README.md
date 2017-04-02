@@ -34,7 +34,7 @@ Log file is /home/ubuntu/.vnc/ff651f4fb3d2:1.log
 ```
 6. Outside the container, you can now vncviewer localhost:5901
 
-7. Start the Terminal Emulator from the XFCE menu. In the Terminal Emulator, type 'firefox' to start the Firefox web browser. Firefox doesn't start correctly from the XFCE menu.
+7. Start the Terminal Emulator from the XFCE menu. In the Terminal Emulator, type 'cd firefox; ./firefox &' to start the Firefox web browser.
 
 # Issues on MacOS X El Capitan
 
