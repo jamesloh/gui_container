@@ -50,3 +50,12 @@ I will try to do it when I have the time.
 
 Otherwise, enjoy!
 
+# Example Application
+
+Use above image to run eclipse.
+
+sudo docker build -f java8gui -t java8gui .
+
+sudo docker run -v "`pwd`":/home/ubuntu/projects -p 5902:5901 --name eclipse -td java8gui
+
+sudo docker exec -it eclipse bash
