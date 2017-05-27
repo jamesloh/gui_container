@@ -13,6 +13,7 @@ RUN apt-get install -y curl git vim expect-dev
 USER ubuntu
 ENV USER ubuntu
 ENV HOME /home/ubuntu
+ENV TERM xterm-256color
 WORKDIR /home/ubuntu
 RUN mkdir /home/ubuntu/projects
 
